@@ -1,2 +1,5 @@
 # PC-Skills-Framework
- Alexa PC Skills for Social Media Handler Skill
+Repository for Social Media PC Skills
+
+## Instructions
+Unzip the PC-Skills-Framework file in C drive

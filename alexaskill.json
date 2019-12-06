@@ -1,0 +1,215 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "social media handler",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "TweetHelloWorld",
+                    "slots": [],
+                    "samples": [
+                        "twitter demo",
+                        "twitter hello world"
+                    ]
+                },
+                {
+                    "name": "TweetIntent",
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "{text}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "tweet",
+                        "post something on twitter",
+                        "post status on twitter",
+                        "Tweet a status"
+                    ]
+                },
+                {
+                    "name": "TweetCamera",
+                    "slots": [],
+                    "samples": [
+                        "tweet photo from webcam",
+                        "post a picture from webcam to twitter",
+                        "take a picture and tweet",
+                        "open camera and tweet",
+                        "Take picture and tweet"
+                    ]
+                },
+                {
+                    "name": "InstDependencies",
+                    "slots": [],
+                    "samples": [
+                        "setup dependencies",
+                        "setup twitter bot",
+                        "install requirements",
+                        "Install dependencies"
+                    ]
+                },
+                {
+                    "name": "PCInfo",
+                    "slots": [],
+                    "samples": [
+                        "post my pc specification to twitter",
+                        "post my pc specs",
+                        "post my pc info",
+                        "post my computer specification on twitter",
+                        "Post my pc information to twitter"
+                    ]
+                },
+                {
+                    "name": "TweetWithMedia",
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "{text}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "tweet a picture",
+                        "picture tweet",
+                        "image tweet",
+                        "media tweet",
+                        "tweet with image",
+                        "Tweet with media"
+                    ]
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "TweetIntent",
+                    "delegationStrategy": "ALWAYS",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": true,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "confirmation": "Confirm.Slot.1162399343303.494881457662",
+                                "elicitation": "Elicit.Slot.1162399343303.494881457662"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "TweetWithMedia",
+                    "delegationStrategy": "ALWAYS",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1234015473750.859439804987"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.1162399343303.494881457662",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What should I tweet?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What is the tweet?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What do you wanna tweet ?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.1162399343303.494881457662",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Done. I have posted {text}"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Okay, Tweet {text} is posted"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Ok I am tweeting {text}"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.807001452693",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "You want me to tweet {text} for you right?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1234015473750.859439804987",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What should be the status for it?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.1452331704729",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you want to post this tweet {text} ?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "You want me to tweet {text} for you. Right?"
+                    }
+                ]
+            }
+        ]
+    }
+}

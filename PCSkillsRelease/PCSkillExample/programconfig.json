@@ -1,0 +1,9 @@
+﻿{
+  "demotweet": "python C:/PC-Skills-Framework/PCSkillsRelease/Tweet/tweetomatic.py -t \"This is an automated tweet using Alexa #IoT #PCSkills\"",
+  "image_path": "C:/PC-Skills-Framework/PCSkillsRelease/Tweet/image/image.jpg",
+
+  "tweetomatic": "python C:/PC-Skills-Framework/PCSkillsRelease/Tweet/tweetomatic.py",
+  "pcinfo": "python C:/PC-Skills-Framework/PCSkillsRelease/Tweet/pcinfo.py",
+  "tweetcam": "python C:/PC-Skills-Framework/PCSkillsRelease/Tweet/camera.py",
+  "dependencies": "pip install -r C:/PC-Skills-Framework/PCSkillsRelease/Tweet/requirements.txt"
+}
