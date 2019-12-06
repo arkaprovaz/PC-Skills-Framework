@@ -492,7 +492,7 @@ namespace PCSkillExample
                 process.StartInfo.FileName = @"cmd.exe";
                 JObject o2;
                 dynamic jsondecoded;
-                using (StreamReader file = File.OpenText(@"..\..\..\config.json"))
+                using (StreamReader file = File.OpenText(@"..\..\..\programconfig.json"))
                 using (JsonTextReader reader = new JsonTextReader(file))
                 {
                     o2 = (JObject)JToken.ReadFrom(reader);
