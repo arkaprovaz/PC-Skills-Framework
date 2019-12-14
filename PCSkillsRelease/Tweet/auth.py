@@ -30,7 +30,7 @@ def req_token_generation():
 def authenticate_browser(resources):
     url = 'https://api.twitter.com/oauth/authenticate?oauth_token='+resources[0]
     wb.open(url)
-    with socketserver.TCPServer(('127.0.0.1',8000),handler) as httpd:
+    with socketserver.TCPServer(('127.0.0.1',1234),handler) as httpd:
         print('Starting handler')
         httpd.handle_request()
     return 
